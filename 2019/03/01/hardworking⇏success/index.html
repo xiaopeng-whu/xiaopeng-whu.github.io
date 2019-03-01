@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="操作系统,批处理系统,分时操作系统,">
+  <meta name="keywords" content="想法,">
 
 
 
@@ -79,23 +79,18 @@
 
 
 
-<meta name="description" content="首先要弄清批处理系统和分时系统的区别。 批处理系统严格的定义，就是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。这种采用批量处理作业技术的操作系统称为批处理操作系统。 简单来说就是我手中有一大堆作业（相当于一个程序）要运行，如果我一个一个作业放进内存中执行效率就会很慢，因为我要人为的去装载程序（早期机器会把程序写到磁带中，然后人为地放到专门处理程序的机器中），所以我一次">
-<meta name="keywords" content="操作系统,批处理系统,分时操作系统">
+<meta name="description" content="0x00一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。 新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。 但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用met">
+<meta name="keywords" content="想法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单道批处理、多道批处理和分时操作系统">
-<meta property="og:url" content="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/index.html">
+<meta property="og:title" content="hardworking⇏success">
+<meta property="og:url" content="http://yoursite.com/2019/03/01/hardworking⇏success/index.html">
 <meta property="og:site_name" content="王小鹏&#39;s Blog">
-<meta property="og:description" content="首先要弄清批处理系统和分时系统的区别。 批处理系统严格的定义，就是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。这种采用批量处理作业技术的操作系统称为批处理操作系统。 简单来说就是我手中有一大堆作业（相当于一个程序）要运行，如果我一个一个作业放进内存中执行效率就会很慢，因为我要人为的去装载程序（早期机器会把程序写到磁带中，然后人为地放到专门处理程序的机器中），所以我一次">
+<meta property="og:description" content="0x00一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。 新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。 但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用met">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/批处理系统.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/联机批处理系统.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/脱机批处理系统.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/分时系统.png">
-<meta property="og:updated_time" content="2019-02-20T03:28:25.391Z">
+<meta property="og:updated_time" content="2019-03-01T16:03:34.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单道批处理、多道批处理和分时操作系统">
-<meta name="twitter:description" content="首先要弄清批处理系统和分时系统的区别。 批处理系统严格的定义，就是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。这种采用批量处理作业技术的操作系统称为批处理操作系统。 简单来说就是我手中有一大堆作业（相当于一个程序）要运行，如果我一个一个作业放进内存中执行效率就会很慢，因为我要人为的去装载程序（早期机器会把程序写到磁带中，然后人为地放到专门处理程序的机器中），所以我一次">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/批处理系统.png">
+<meta name="twitter:title" content="hardworking⇏success">
+<meta name="twitter:description" content="0x00一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。 新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。 但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用met">
 
 
 
@@ -125,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/01/hardworking⇏success/">
 
 
 
 
 
-  <title>单道批处理、多道批处理和分时操作系统 | 王小鹏's Blog</title>
+  <title>hardworking⇏success | 王小鹏's Blog</title>
   
 
 
@@ -260,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/单道批处理、多道批处理和分时操作系统/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/hardworking⇏success/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zepeng Wang">
@@ -277,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">单道批处理、多道批处理和分时操作系统</h1>
+          <h1 class="post-title" itemprop="name headline">hardworking⇏success</h1>
         
 
         <div class="post-meta">
@@ -289,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T10:08:13+08:00">
-                2019-02-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T18:21:15+08:00">
+                2019-03-01
               </time>
             
 
@@ -312,8 +307,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/操作系统/" itemprop="url" rel="index">
-                    <span itemprop="name">操作系统</span>
+                  <a href="/categories/闲谈/" itemprop="url" rel="index">
+                    <span itemprop="name">闲谈</span>
                   </a>
                 </span>
 
@@ -343,7 +338,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k 字
+                  1.1k 字
                 </span>
               
 
@@ -359,7 +354,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -383,38 +378,19 @@
 
       
         <hr>
-<p>首先要弄清批处理系统和分时系统的区别。</p>
-<h1 id="批处理系统"><a href="#批处理系统" class="headerlink" title="批处理系统"></a>批处理系统</h1><p>严格的定义，就是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。这种采用批量处理作业技术的操作系统称为批处理操作系统。</p>
-<p>简单来说就是我手中有一大堆作业（相当于一个程序）要运行，如果我一个一个作业放进内存中执行效率就会很慢，因为我要人为的去装载程序（早期机器会把程序写到磁带中，然后人为地放到专门处理程序的机器中），所以我一次性放一批的作业，交给操作系统运行而我不干涉，这样便节省了很多人力，如下图。</p>
-<p><img src="/2019/02/20/单道批处理、多道批处理和分时操作系统/批处理系统.png" alt="批处理系统"></p>
-<p>而早期的批处理又分为联机批处理和脱机批处理。</p>
-<h3 id="联机批处理"><a href="#联机批处理" class="headerlink" title="联机批处理"></a>联机批处理</h3><p>联机批处理系统即作业的I/O由CPU来处理。主机与输入级之间增加一个存储设备——磁带，依次把磁带上的用户作业读入主机内存并执行并把计算结果向输出机输出。完成了上一批作业后，监督程序又从输入机上输入另一批作业，保存在磁带上，并按上述步骤重复处理。</p>
-<p>监督程序不停地处理各个作业，从而实现了作业到作业的自动转接，减少了作业建立时间和手工操作时间，有效克服了人机矛盾，提高了计算机的利用率。</p>
-<p>但是，在作业输入和结果输出时，主机的高速CPU仍处于空闲状态，等待慢速的输入/输出设备完成工作： 主机处于“忙等”状态。</p>
-<p><img src="/2019/02/20/单道批处理、多道批处理和分时操作系统/联机批处理系统.jpg" alt="联机批处理系统"></p>
-<h3 id="脱机批处理"><a href="#脱机批处理" class="headerlink" title="脱机批处理"></a>脱机批处理</h3><p>为提高CPU的利用率，克服缓解高速主机与慢速外设的矛盾，引入了脱机批处理系统，即I/0脱离主机控制。</p>
-<p>增加一台不与主机直接相连而专门用于与I/O设备打交道的微型机（外围机）。</p>
-<p>其功能是：<br>（1）从输入机上读取用户作业并放到输入磁带上。<br>（2）从输出磁带上读取执行结果并传给输出机。</p>
-<p>这样，主机不是直接与慢速的输入/输出设备打交道，而是与速度相对较快的磁带机发生关系，有效缓解了主机与设备的矛盾。主机与卫星机可并行工作，二者分工明确，可以充分发挥主机的高速计算能力。</p>
-<p>不足：每次主机内存中仅存放一道作业，每当它运行期间发出输入/输出（I/O）请求后，高速的CPU便处于等待低速的I/O完成状态，致使CPU空闲。</p>
-<p><img src="/2019/02/20/单道批处理、多道批处理和分时操作系统/脱机批处理系统.jpg" alt="脱机批处理系统"></p>
-<h1 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h1><p>分时操作系统：“分时”的含义是指多个用户使用同一台计算机，多个程序分时（分时间片）共享硬件和软件资源。分时操作系统是指在一台主机上连接多个带有显示器和键盘的终端，同时允许多个用户通过主机的终端，以交互方式使用计算机，共享主机中的资源。，分时操作系统将CPU的时间划分成若干个片段，称为时间片，操作系统以时间片为单位，轮流为每个终端用户服务，如下图。</p>
-<p><img src="/2019/02/20/单道批处理、多道批处理和分时操作系统/分时系统.png" alt="分时系统"></p>
-<p>从这二者我们可以得到：批处理系统没有人机交互，而分时系统允许多个用户同时使用；批处理系统中允许程序长时间占用CPU，而分时系统不允许。</p>
-<p>下面再对比一下单道批处理、多道批处理和分时操作系统。</p>
-<h1 id="单道批处理系统"><a href="#单道批处理系统" class="headerlink" title="单道批处理系统"></a>单道批处理系统</h1><p>为了实现对作业的连续处理，需要先把一批作业以脱机方式输入到磁盘上，并在系统中配上监督程序（Monitor），在它的控制下，使得这批作业能一个接着一个的连续工作。</p>
-<p>具体的工作过程是首先由监督程序将磁带上的第一个作业装入内存，并把运行控制权交给作业；该作业处理完时，又把控制权交给监督程序，再有监督程序把磁带的第二个作业调入内存等等。可以看成是串行的。</p>
-<p>优点：解决人机矛盾和CPU与IO设备速度不匹配问题，提高系统资源的利用率和系统吞吐量。</p>
-<p>缺点：不能充分的利用系统资源，现很少使用。</p>
-<h1 id="多道批处理系统"><a href="#多道批处理系统" class="headerlink" title="多道批处理系统"></a>多道批处理系统</h1><p>多道程序系统是在计算机内存中同时存放几道相互独立的程序，使它们在管理程序控制之下，相互穿插的运行。 两个或两个以上程序在计算机系统中同处于开始和结束之间的状态。这就称为多道程序技术运行的特征：多道、宏观上并行、微观上串行。</p>
-<p>多道程序设计指的是允许多个程序同时进入一个计算机系统的主存储器并启动进行计算的方法。也就是说，计算机内存中可以同时存放多道（两个以上相互独立的）程序，它们都处于开始和结束之间。从宏观上看是并行的，多道程序都处于运行中，并且都没有运行结束；从微观上看是串行的，各道程序轮流使用CPU，交替执行。引入多道程序设计技术的根本目的是为了提高CPU的利用率，充分发挥计算机系统部件的并行性，现代计算机系统都采用了多道程序设计技术。</p>
-<p>优势：资源利用率高，使CPU始终处于忙碌的状态，提高内存的利用率，提高IO利用率；系统吞吐量大（CPU和其资源始终保持忙碌的状态，仅在作业完成时或者运行不下去的时候才切换，系统开销小）。</p>
-<p>缺点：平均周转时间长，无交互能力。</p>
-<h1 id="分时操作系统"><a href="#分时操作系统" class="headerlink" title="分时操作系统"></a>分时操作系统</h1><p>分时操作系统是使一台计算机同时为几个、几十个甚至几百个用户服务的一种操作系统。把计算机与许多终端用户连接起来，分时操作系统将系统处理机时间与内存空间按一定的时间间隔，轮流地切换给各终端用户的程序使用。由于时间间隔很短，每个用户的感觉就像他独占计算机一样。分时操作系统的特点是可有效增加资源的使用率。例如UNIX系统就采用剥夺式动态优先的CPU调度，有力地支持分时操作。</p>
-<p>分时操作系统是给不同用户提供程序的使用，而多道程序系统则是不同程序间的穿插运行。</p>
-<p>总之，分时操作系统主要是针对于多用户来说的，而多道程序系统主要是针对于多程序来说的，注意用户和程序之间的区别。</p>
-<p>参考链接：<br><a href="https://blog.csdn.net/dan15188387481/article/details/49427579?utm_source=blogxgwz1" target="_blank" rel="noopener">https://blog.csdn.net/dan15188387481/article/details/49427579?utm_source=blogxgwz1</a></p>
-<p><a href="https://blog.csdn.net/qq_30137611/article/details/68065609" target="_blank" rel="noopener">https://blog.csdn.net/qq_30137611/article/details/68065609</a></p>
+<h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。</p>
+<p>新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。</p>
+<p>但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用metasploit进行android手机的渗透。在网上看视频操作挺简单的，一自己实践就各种问题。</p>
+<p>先是因为我的linux是使用虚拟机NAT模式进行配置联网的，导致主机和虚拟机的ip地址不在一个网段，进而最后生成的木马无法对同连校园网的手机进行监听，因为这种渗透方式需要监听机与被监听机ip在一个网段，这是第一个大问题。</p>
+<p>后来找到另一种方法，使用ngrok进行内网转发，就是将虚拟机的ip映射为外网ip（大概是这样吧我也不太懂），但照着教程一步不落地做完，到最后一步还是接收不到shell权限，session总是opend后很快就closed，百度了半天也没找到解决方法，后来加了数字签名也没用，猜测是转发方式不对或者木马进程被android系统关闭，但尝试多次还是解决不了，只能换思路。</p>
+<p>之后就考虑改变虚拟机联网方式为桥接模式，但配置了很长时间尝试了很多次，改了设置最后就不能连不上外网了，目前猜测的可能原因是：kali系统不同导致一些文件路径不同，或是虚拟机本身存在问题，或是自己操作上的问题..（linux很多命令不熟悉…)</p>
+<p>差不多一周过去了还是没能成功实现一次，现在考虑换个主题了…难受…</p>
+<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>前几天考研结果出来了，本来没有我这个大二生什么事的，但之前关注的几个b站学习up主也都发了动态。其中有一个up主我认为是肯定能考上的，结果成绩不理想，复查也没有发现问题，太可惜了。这个up主在上学期的时候，基本上只要我起床她都已经开始学习了，每天学习十个小时以上，甚至有过十六个小时，如此努力的人却没有实现自己的目标，实在让我对“努力学习”的“努力”产生了怀疑。</p>
+<p>曾经我一直以为只要想考研且有决心每天认真学习，考过是很顺理成章的一件事，现在看来并不是这样了。一直以来我一直不注重平常的基础学习，对未来还没有明确的规划，想着车到山前必有路，就算大三放弃其他念头专心备考也应该没什么困难，现在再看这想法实在是太天真了…脚踏实地，以及听天由命吧。</p>
+<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>刚刚在微博看到一句话很能描述我现在的状态，“大多数程序员都高估了他们一天能完成的开发量，却低估了他们一年能学习到的东西”。</p>
+<p>一周没能完成一项任务，总以为很简单的事情一晚上就能解决，实际上是高估了自己。而自己又没有一个长远的目标可供追求，总认为那些“遥不可及”的目标真的实现不了，可能也是低估了一个想上进的心吧。但这又和上面的事情有些矛盾，也或许不矛盾，无所谓了，都是些奇奇怪怪的想法。</p>
+<h1 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h1><p>以前考试周也不常出宿舍学习的舍友这学期都开始认真学习了，反而我却迟迟进不了状态…明天（或者说是今天，刚过了12点..）图书馆希望能约束下自己吧。</p>
+<p>想法到此为止，安安稳稳睡一觉，美好的事物都在明天等着我。</p>
 
       
     </div>
@@ -442,11 +418,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/操作系统/" rel="tag"># 操作系统</a>
-          
-            <a href="/tags/批处理系统/" rel="tag"># 批处理系统</a>
-          
-            <a href="/tags/分时操作系统/" rel="tag"># 分时操作系统</a>
+            <a href="/tags/想法/" rel="tag"># 想法</a>
           
         </div>
       
@@ -459,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/25/单链表/" rel="next" title="单链表">
-                <i class="fa fa-chevron-left"></i> 单链表
+              <a href="/2019/02/24/win10使用虚拟机运行QQT/" rel="next" title="win10使用虚拟机运行QQT">
+                <i class="fa fa-chevron-left"></i> win10使用虚拟机运行QQT
               </a>
             
           </div>
@@ -468,10 +440,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/24/win10使用虚拟机运行QQT/" rel="prev" title="win10使用虚拟机运行QQT">
-                win10使用虚拟机运行QQT <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -623,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#批处理系统"><span class="nav-number">1.</span> <span class="nav-text">批处理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#联机批处理"><span class="nav-number">1.0.1.</span> <span class="nav-text">联机批处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脱机批处理"><span class="nav-number">1.0.2.</span> <span class="nav-text">脱机批处理</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#分时系统"><span class="nav-number">2.</span> <span class="nav-text">分时系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单道批处理系统"><span class="nav-number">3.</span> <span class="nav-text">单道批处理系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多道批处理系统"><span class="nav-number">4.</span> <span class="nav-text">多道批处理系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分时操作系统"><span class="nav-number">5.</span> <span class="nav-text">分时操作系统</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00"><span class="nav-number">1.</span> <span class="nav-text">0x00</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01"><span class="nav-number">2.</span> <span class="nav-text">0x01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02"><span class="nav-number">3.</span> <span class="nav-text">0x02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03"><span class="nav-number">4.</span> <span class="nav-text">0x03</span></a></li></ol></div>
             
 
           </div>

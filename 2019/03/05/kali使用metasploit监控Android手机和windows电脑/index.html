@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="想法,">
+  <meta name="keywords" content="metasploit,kali,渗透测试,">
 
 
 
@@ -79,18 +79,24 @@
 
 
 
-<meta name="description" content="0x00一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。 新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。 但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用met">
-<meta name="keywords" content="想法">
+<meta name="description" content="信安系统导论布置的第一次小组作业，是在kali虚拟机上实现一种攻击方式，之前甚至没听说过kali的我，一开始是一脸懵逼的…后来装了kali知道这种linux系统自带了许多渗透攻击类的工具，是很好的进行内网渗透测试的一个操作系统环境。随之在网上搜索简单易学的攻击方式… 最后在b站看到了一个使用metasploit进行android手机监控的操作视频，看起来操作并不复杂，最终实现的效果也十分吸引人—">
+<meta name="keywords" content="metasploit,kali,渗透测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hardworking⇏success">
-<meta property="og:url" content="http://yoursite.com/2019/03/01/hardworking⇏success/index.html">
+<meta property="og:title" content="kali使用metasploit监控Android手机和windows电脑">
+<meta property="og:url" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/index.html">
 <meta property="og:site_name" content="王小鹏&#39;s Blog">
-<meta property="og:description" content="0x00一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。 新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。 但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用met">
+<meta property="og:description" content="信安系统导论布置的第一次小组作业，是在kali虚拟机上实现一种攻击方式，之前甚至没听说过kali的我，一开始是一脸懵逼的…后来装了kali知道这种linux系统自带了许多渗透攻击类的工具，是很好的进行内网渗透测试的一个操作系统环境。随之在网上搜索简单易学的攻击方式… 最后在b站看到了一个使用metasploit进行android手机监控的操作视频，看起来操作并不复杂，最终实现的效果也十分吸引人—">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-01T16:03:34.011Z">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/手机监控示例.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/step1.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/step2.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/电脑监控示例.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/截取当前屏幕.png">
+<meta property="og:updated_time" content="2019-03-07T12:36:15.720Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hardworking⇏success">
-<meta name="twitter:description" content="0x00一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。 新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。 但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用met">
+<meta name="twitter:title" content="kali使用metasploit监控Android手机和windows电脑">
+<meta name="twitter:description" content="信安系统导论布置的第一次小组作业，是在kali虚拟机上实现一种攻击方式，之前甚至没听说过kali的我，一开始是一脸懵逼的…后来装了kali知道这种linux系统自带了许多渗透攻击类的工具，是很好的进行内网渗透测试的一个操作系统环境。随之在网上搜索简单易学的攻击方式… 最后在b站看到了一个使用metasploit进行android手机监控的操作视频，看起来操作并不复杂，最终实现的效果也十分吸引人—">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/手机监控示例.jpg">
 
 
 
@@ -120,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/01/hardworking⇏success/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/">
 
 
 
 
 
-  <title>hardworking⇏success | 王小鹏's Blog</title>
+  <title>kali使用metasploit监控Android手机和windows电脑 | 王小鹏's Blog</title>
   
 
 
@@ -255,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/hardworking⇏success/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/kali使用metasploit监控Android手机和windows电脑/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zepeng Wang">
@@ -272,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hardworking⇏success</h1>
+          <h1 class="post-title" itemprop="name headline">kali使用metasploit监控Android手机和windows电脑</h1>
         
 
         <div class="post-meta">
@@ -284,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T18:21:15+08:00">
-                2019-03-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T17:45:58+08:00">
+                2019-03-05
               </time>
             
 
@@ -307,8 +313,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/闲谈/" itemprop="url" rel="index">
-                    <span itemprop="name">闲谈</span>
+                  <a href="/categories/渗透测试/" itemprop="url" rel="index">
+                    <span itemprop="name">渗透测试</span>
                   </a>
                 </span>
 
@@ -378,19 +384,29 @@
 
       
         <hr>
-<h1 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h1><p>一周过后尝试无果，想写技术博客也写不了，写点最近的一些感触吧。</p>
-<p>新学期课程增多，实验部分也明显增加，许多东西都要自己课下自学再在自己机器上做实验，虽然难度不小，但比以往的电路实验那种需要手工操作的要有趣得多，自己也愿意在这上面投入时间而不是被动完成作业的形式。</p>
-<p>但毕竟自己太菜，掌握知识太少，理论还能突击学习，一到实践就各种错误。信安系统导论课布置的要求实现一种渗透方式，我选择了使用metasploit进行android手机的渗透。在网上看视频操作挺简单的，一自己实践就各种问题。</p>
-<p>先是因为我的linux是使用虚拟机NAT模式进行配置联网的，导致主机和虚拟机的ip地址不在一个网段，进而最后生成的木马无法对同连校园网的手机进行监听，因为这种渗透方式需要监听机与被监听机ip在一个网段，这是第一个大问题。</p>
-<p>后来找到另一种方法，使用ngrok进行内网转发，就是将虚拟机的ip映射为外网ip（大概是这样吧我也不太懂），但照着教程一步不落地做完，到最后一步还是接收不到shell权限，session总是opend后很快就closed，百度了半天也没找到解决方法，后来加了数字签名也没用，猜测是转发方式不对或者木马进程被android系统关闭，但尝试多次还是解决不了，只能换思路。</p>
-<p>之后就考虑改变虚拟机联网方式为桥接模式，但配置了很长时间尝试了很多次，改了设置最后就不能连不上外网了，目前猜测的可能原因是：kali系统不同导致一些文件路径不同，或是虚拟机本身存在问题，或是自己操作上的问题..（linux很多命令不熟悉…)</p>
-<p>差不多一周过去了还是没能成功实现一次，现在考虑换个主题了…难受…</p>
-<h1 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h1><p>前几天考研结果出来了，本来没有我这个大二生什么事的，但之前关注的几个b站学习up主也都发了动态。其中有一个up主我认为是肯定能考上的，结果成绩不理想，复查也没有发现问题，太可惜了。这个up主在上学期的时候，基本上只要我起床她都已经开始学习了，每天学习十个小时以上，甚至有过十六个小时，如此努力的人却没有实现自己的目标，实在让我对“努力学习”的“努力”产生了怀疑。</p>
-<p>曾经我一直以为只要想考研且有决心每天认真学习，考过是很顺理成章的一件事，现在看来并不是这样了。一直以来我一直不注重平常的基础学习，对未来还没有明确的规划，想着车到山前必有路，就算大三放弃其他念头专心备考也应该没什么困难，现在再看这想法实在是太天真了…脚踏实地，以及听天由命吧。</p>
-<h1 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h1><p>刚刚在微博看到一句话很能描述我现在的状态，“大多数程序员都高估了他们一天能完成的开发量，却低估了他们一年能学习到的东西”。</p>
-<p>一周没能完成一项任务，总以为很简单的事情一晚上就能解决，实际上是高估了自己。而自己又没有一个长远的目标可供追求，总认为那些“遥不可及”的目标真的实现不了，可能也是低估了一个想上进的心吧。但这又和上面的事情有些矛盾，也或许不矛盾，无所谓了，都是些奇奇怪怪的想法。</p>
-<h1 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h1><p>以前考试周也不常出宿舍学习的舍友这学期都开始认真学习了，反而我却迟迟进不了状态…明天（或者说是今天，刚过了12点..）图书馆希望能约束下自己吧。</p>
-<p>想法到此为止，安安稳稳睡一觉，美好的事物都在明天等着我。</p>
+<p>信安系统导论布置的第一次小组作业，是在kali虚拟机上实现一种攻击方式，之前甚至没听说过kali的我，一开始是一脸懵逼的…后来装了kali知道这种linux系统自带了许多渗透攻击类的工具，是很好的进行内网渗透测试的一个操作系统环境。随之在网上搜索简单易学的攻击方式…</p>
+<p>最后在b站看到了一个使用metasploit进行android手机监控的操作视频，看起来操作并不复杂，最终实现的效果也十分吸引人————偷拍、暗中录音等，于是小组（我单方面）初步定下了这个主题。</p>
+<p>然而当我按步骤一步不落地操作完毕后，执行exploit我并没有得到手机的权限，尝试多次无果只得百度，得知这种渗透方法要求环境是客户机与宿主机在一个网段，即内网环境。虽然我的主机和手机都连着校园网，但因为我的kali使用NAT模式进行联网，得到的ip地址是虚拟机随机分配的，导致kali的ip与手机ip并不能在一个网段，也就无法实现监听。</p>
+<p>既然知道了问题出在哪，那应该很容易解决了吧。（然而可达鸭眉头一皱，发现事情并没有那么简单.jpg）百度后得知使用桥接模式可使主机与虚拟机共享ip即可实现处于同一网段，但当我又是按照网上教程一步不落地操作完毕，包括手动改了虚拟机内的ip、掩码、网关、DNS等设置，却出现了让人崩溃的事情——无法联网！在此之后又是无数次重复操作的过程，在确认操作确实没有问题后，我自闭了…（后来知道了是校园网的问题..主机连校园网虚拟机就无法使用桥接模式联网..<a href="https://blog.csdn.net/u013121305/article/details/49669811）" target="_blank" rel="noopener">https://blog.csdn.net/u013121305/article/details/49669811）</a></p>
+<p>后来换个角度，找了下如何内网转外网渗透，一个教程提供了一个内网转发的工具（网站）–ngrok cc，貌似是把ip映射成另一个ip，具体原理不太懂..依旧是按照教程全部做完，最后的确有了反应，但在上传完毕后几秒后就连接失败了，始终无法得到权限，再次懵逼…目前还不懂错在哪里，可能是这个方法不适用吧，等之后理解了原理再回头看，先搁置着…</p>
+<p>最后没有办法了，选择再装一个安卓虚拟机，这样两个机器都采用NAT模式得到同一ip段的ip，也不需要和主机一致。再一步步重复开始的操作，总算成功了…但由于是虚拟机，所以很多功能并无法实现…比如隐秘拍照会得到一张彩色二维码式的图片…短信电话什么的都不能获取，只能查一下系统版本来证明真的是成功获取权限了…</p>
+<p><img src="/2019/03/05/kali使用metasploit监控Android手机和windows电脑/手机监控示例.jpg" alt="手机监控示例"></p>
+<p>下面把步骤记录一下（这里以入侵windows来作示例，入侵android同理，只需把windows改成android就ok了）：</p>
+<p>##0x00 生成木马</p>
+<p><img src="/2019/03/05/kali使用metasploit监控Android手机和windows电脑/step1.png" alt="step1"></p>
+<p>##0x01 将木马传到宿主机上</p>
+<p>这里因为是作实验，选择直接上传到网盘再下载，也没有作任何隐蔽或反查杀处置，以后学到其他知识再进行优化。</p>
+<p>##0x02 进入msf配置参数</p>
+<p><img src="/2019/03/05/kali使用metasploit监控Android手机和windows电脑/step2.png" alt="step2"></p>
+<p>##0x03 开启监听</p>
+<p>等到端口号和ip地址都设置好后，执行exploit等待对方开启木马即可。</p>
+<p><img src="/2019/03/05/kali使用metasploit监控Android手机和windows电脑/电脑监控示例.jpg" alt="电脑监控示例"></p>
+<p>##0x04 </p>
+<p>使用screenshot等命令进行测试，得到图片说明成功获取权限。</p>
+<p><img src="/2019/03/05/kali使用metasploit监控Android手机和windows电脑/截取当前屏幕.png" alt="截取当前屏幕"></p>
+<p>当然还有很多其他命令可供尝试，这里就不再赘述了。</p>
+<hr>
+<p>整个流程看下来其实并没有什么操作难度，最珍贵的是在从零学习一项技术时遇到各种问题不断解决不断尝试转换思路的过程，最终试验成功也是很让人欣喜。将来要继续努力学习更多技术，从中体验乐趣！</p>
 
       
     </div>
@@ -418,7 +434,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/想法/" rel="tag"># 想法</a>
+            <a href="/tags/metasploit/" rel="tag"># metasploit</a>
+          
+            <a href="/tags/kali/" rel="tag"># kali</a>
+          
+            <a href="/tags/渗透测试/" rel="tag"># 渗透测试</a>
           
         </div>
       
@@ -431,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/24/win10使用虚拟机运行QQT/" rel="next" title="win10使用虚拟机运行QQT">
-                <i class="fa fa-chevron-left"></i> win10使用虚拟机运行QQT
+              <a href="/2019/03/03/ubuntu18-04内核添加系统调用/" rel="next" title="ubuntu18.04内核添加系统调用">
+                <i class="fa fa-chevron-left"></i> ubuntu18.04内核添加系统调用
               </a>
             
           </div>
@@ -440,10 +460,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/03/ubuntu18-04内核添加系统调用/" rel="prev" title="ubuntu18.04内核添加系统调用">
-                ubuntu18.04内核添加系统调用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -495,17 +511,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -585,22 +592,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00"><span class="nav-number">1.</span> <span class="nav-text">0x00</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01"><span class="nav-number">2.</span> <span class="nav-text">0x01</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02"><span class="nav-number">3.</span> <span class="nav-text">0x02</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03"><span class="nav-number">4.</span> <span class="nav-text">0x03</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

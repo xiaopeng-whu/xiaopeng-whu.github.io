@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="系统调用,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="操作系统布置了第一次大作业，让我们给linux内核加一个系统调用，并创建程序验证，还要用ptrace等工具进行监测。监测部分暂时还没有思路，先把前部分操作记录一下。 书上的教程已经太老了，基本没什么参考价值，只是能大概帮助理解一下系统调用的大致流程及原理。在老师没有讲过以及课本没有什么参考资料的时候，百度大概是最好的选择了，好在网上有很多这类的教程。  #尝试version1 一开始想着既然是在">
+<meta name="keywords" content="系统调用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu18.04内核添加系统调用">
+<meta property="og:url" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/index.html">
+<meta property="og:site_name" content="王小鹏&#39;s Blog">
+<meta property="og:description" content="操作系统布置了第一次大作业，让我们给linux内核加一个系统调用，并创建程序验证，还要用ptrace等工具进行监测。监测部分暂时还没有思路，先把前部分操作记录一下。 书上的教程已经太老了，基本没什么参考价值，只是能大概帮助理解一下系统调用的大致流程及原理。在老师没有讲过以及课本没有什么参考资料的时候，百度大概是最好的选择了，好在网上有很多这类的教程。  #尝试version1 一开始想着既然是在">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/kali编译错误.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/函数.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/头文件声明.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/调用号.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/内核安装配置完成.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/创建程序.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/编译成功.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/日志查看.png">
+<meta property="og:updated_time" content="2019-03-03T12:40:38.319Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu18.04内核添加系统调用">
+<meta name="twitter:description" content="操作系统布置了第一次大作业，让我们给linux内核加一个系统调用，并创建程序验证，还要用ptrace等工具进行监测。监测部分暂时还没有思路，先把前部分操作记录一下。 书上的教程已经太老了，基本没什么参考价值，只是能大概帮助理解一下系统调用的大致流程及原理。在老师没有讲过以及课本没有什么参考资料的时候，百度大概是最好的选择了，好在网上有很多这类的教程。  #尝试version1 一开始想着既然是在">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/kali编译错误.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/">
+
+
+
+
+
+  <title>ubuntu18.04内核添加系统调用 | 王小鹏's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	<a href="https://github.com/xiaopeng-whu"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">王小鹏's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/03/ubuntu18-04内核添加系统调用/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zepeng Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王小鹏's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ubuntu18.04内核添加系统调用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-03T18:47:20+08:00">
+                2019-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/操作系统/" itemprop="url" rel="index">
+                    <span itemprop="name">操作系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.3k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+	
+	
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>操作系统布置了第一次大作业，让我们给linux内核加一个系统调用，并创建程序验证，还要用ptrace等工具进行监测。监测部分暂时还没有思路，先把前部分操作记录一下。</p>
+<p>书上的教程已经太老了，基本没什么参考价值，只是能大概帮助理解一下系统调用的大致流程及原理。在老师没有讲过以及课本没有什么参考资料的时候，百度大概是最好的选择了，好在网上有很多这类的教程。</p>
+<hr>
+<p>#尝试version1</p>
+<p>一开始想着既然是在linux添加修改内核，不如直接在之前为了信安课而装的kali上进行，网上相关教程也不少，但不得不说，在系统调用方面，kali就是个弟弟…各种缺配置缺文件，甚至版本不同路径都可能不一样。你不知道你缺什么配置工具，只能做一步停一步慢慢开展，而大部分配置甚至不能直接用<code>sudo apt-get install</code>来进行安装，会提示各种错误，比如找不到所需安装包，这时又要去百度才知道还要更改source.list的源；在比如两个文件有依赖关系，就要先安一个提示的版本再重新安装…总之会遇到各种各样的问题，花了一上午加下午经历了无数大大小小错误甚至升级了VMware版本，最后好不容易能进行<code>sudo make -j4</code>编译操作了，结果运行了十分钟又报错，很奇怪的错。<br><img src="/2019/03/03/ubuntu18-04内核添加系统调用/kali编译错误.jpg" alt="kali编译错误"><br>网上甚至很少解决方法（我就找到一种明确的，还对我的系统不适用…)当时直接心态崩了..直接选择换linux系统用ubuntu来做。</p>
+<hr>
+<p>#尝试version2</p>
+<p>换ubuntu安装时甚至也出现了错误，最后的安装过程时间很长，我就先去买饭，回来就发现电脑蓝屏了..(此处心疼电脑1s…)开机又配置了下语言、VMware Tools工具等东西。</p>
+<p>换了系统后再按照网上的ubuntu18.04系统调用教程一步一步做，基本没有出错，深觉一个好系统的重要性..</p>
+<p>步骤记录在这里吧。</p>
+<p>##1.准备操作（提前安装好后续可能用到的软件和工具）</p>
+<pre><code>sudo apt-get update  //更新系统源码 
+sudo apt-get install vim //安装vim
+sudo apt-get install libncurses5-dev libssl-dev  //下载依赖包
+sudo apt-get install build-essential openssl  
+sudo apt-get install zlibc minizip  
+sudo apt-get install libidn11-dev libidn11
+sudo apt-get install flex bison //没有这个依赖包可能会在make menuconfig配置界面报错。
+***依赖包缺少系统一般会有提示，装好了错误也就解决了。
+</code></pre><p>##2.内核的解压和添加自己的系统调用</p>
+<p>###解压</p>
+<p>先将在官网下好的内核直接拉到ubuntu里，然后将压缩包用指令移到/usr/src目录下面（过程需要root权限）。</p>
+<p>###添加系统调用</p>
+<p>（最好先将目录切换到解压后的内核里操作）</p>
+<pre><code>sudo vim kernel/sys.c //添加自己的函数
+</code></pre><p><img src="/2019/03/03/ubuntu18-04内核添加系统调用/函数.png" alt="函数"></p>
+<pre><code>sudo vim arch/x86/include/asm/syscalls.h //声明
+</code></pre><p><img src="/2019/03/03/ubuntu18-04内核添加系统调用/头文件声明.png" alt="头文件声明"></p>
+<pre><code>sudo vim arch/x86/entry/syscalls/syscall_64.tbl  //添加调用号
+</code></pre><p><img src="/2019/03/03/ubuntu18-04内核添加系统调用/调用号.png" alt="调用号"></p>
+<p>这里注意声明函数以及调用名称要一致，否则后面编译会出错。</p>
+<p>##3.删除一些无用的文件</p>
+<pre><code>sudo make mrproper //会删除所有的编译生成文件、内核配置文件（.config文件）和各种备份文件，几乎只在第一次执行内核编译前采用这条命令
+
+sudo make clean //这命令则是用于删除大多数的编译生成文件，但会保留内核的配置文件.config，还有足够的编译支持扩展模块。所以若只想删除前一次编译过程的残留数据，只需执行make clean命令。
+
+//前一条命令删除的范围更大，事实上，make mrproper在具体执行时第一步就是调用make clean
+
+sudo make menuconfig //产生图形化界面，save后exit就行了
+</code></pre><p>##4.编译新内核并安装</p>
+<p>###编译<br>    sudo make -j4 //后面的-j4是采用四核来加速编译速度，若不使用则会很慢，取决于虚拟机处理器的内核总数的设置<br>经过漫长的等待..我是直接开了机器直接睡觉睡醒就好了..</p>
+<p>###安装<br>    sudo make modules_install<br>    sudo make install<br><img src="/2019/03/03/ubuntu18-04内核添加系统调用/内核安装配置完成.jpg" alt="内核安装配置完成"></p>
+<p>##5.重启</p>
+<p>一开始我并不知道怎么选择新的内核，后来才知道ubuntu重启自动默认选择新内核，貌似要选择其他的要开机一直按ESC，反正不需要了先记录下。</p>
+<p>利用<code>uname -a</code>可知前后版本不同，内核已经改变。</p>
+<p>##6.测试</p>
+<p>编写c文件编译进行测试，以及查看日志文件看结果。</p>
+<p>依次执行</p>
+<pre><code>touch hello.c
+gcc -o hello hello.c
+./hello
+</code></pre><p><img src="/2019/03/03/ubuntu18-04内核添加系统调用/创建程序.png" alt="创建程序"></p>
+<p><img src="/2019/03/03/ubuntu18-04内核添加系统调用/编译成功.jpg" alt="编译成功"></p>
+<p><img src="/2019/03/03/ubuntu18-04内核添加系统调用/日志查看.png" alt="日志查看"></p>
+<p>其中注意创建c函数时候要将输出作为long类型输出，因为系统调用默认要求使用long类型（？）。</p>
+<hr>
+<p>添加系统调用的大致过程就是这样了，留几个参考链接便于查阅。</p>
+<p><a href="https://blog.csdn.net/qq_38898129/article/details/80398851" target="_blank" rel="noopener">https://blog.csdn.net/qq_38898129/article/details/80398851</a></p>
+<p><a href="https://blog.csdn.net/qq_36290650/article/details/83184088" target="_blank" rel="noopener">https://blog.csdn.net/qq_36290650/article/details/83184088</a></p>
+<p><a href="https://blog.csdn.net/weixin_42349518/article/details/80517197" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42349518/article/details/80517197</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+	<div>
+
+	<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+
+	</div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/系统调用/" rel="tag"># 系统调用</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/01/hardworking⇏success/" rel="next" title="hardworking⇏success">
+                <i class="fa fa-chevron-left"></i> hardworking⇏success
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/05/kali使用metasploit监控Android手机和windows电脑/" rel="prev" title="kali使用metasploit监控Android手机和windows电脑">
+                kali使用metasploit监控Android手机和windows电脑 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar1.jpg" alt="Zepeng Wang">
+            
+              <p class="site-author-name" itemprop="name">Zepeng Wang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=450795499&auto=1&height=66"></iframe> 
+		  
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xiaopeng-whu" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/5535611908" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zepeng Wang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+  <!-- div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>

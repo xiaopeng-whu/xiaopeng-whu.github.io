@@ -21,13 +21,13 @@ categories: 渗透测试
 
 最后没有办法了，选择再装一个安卓虚拟机，这样两个机器都采用NAT模式得到同一ip段的ip，也不需要和主机一致。再一步步重复开始的操作，总算成功了...但由于是虚拟机，所以很多功能并无法实现...比如隐秘拍照会得到一张彩色二维码式的图片...短信电话什么的都不能获取，只能查一下系统版本来证明真的是成功获取权限了...
 
-![手机监控示例](/img/kali使用metasploit监控Android手机和windows电脑/手机监控示例.jpg)
+![手机监控示例](/kali使用metasploit监控Android手机和windows电脑/手机监控示例.jpg)
 
 下面把步骤记录一下（这里以入侵windows来作示例，入侵android同理，只需把windows改成android就ok了）：
 
 ## 0x00 生成木马
 
-![step1](/img/kali使用metasploit监控Android手机和windows电脑/step1.png)
+![step1](/kali使用metasploit监控Android手机和windows电脑/step1.png)
 
 ## 0x01 将木马传到宿主机上
 
@@ -35,13 +35,13 @@ categories: 渗透测试
 
 ## 0x02 进入msf配置参数
 
-![step2](/img/kali使用metasploit监控Android手机和windows电脑/step2.png)
+![step2](/kali使用metasploit监控Android手机和windows电脑/step2.png)
 
 ## 0x03 开启监听
 
 等到端口号和ip地址都设置好后，执行exploit等待对方开启木马即可。
 
-![电脑监控示例](/img/kali使用metasploit监控Android手机和windows电脑/电脑监控示例.jpg)
+![电脑监控示例](/kali使用metasploit监控Android手机和windows电脑/电脑监控示例.jpg)
 
 ## 0x04 获取权限
 

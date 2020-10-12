@@ -88,7 +88,7 @@ katex:
 
 # Toggle fireworks (IE >= 10)
 # ---------------
-fireworks: false
+fireworks: true
 
 # Analysis
 # ---------------
@@ -237,9 +237,12 @@ disqus:
 
 # Footer Settings
 # ---------------
-since: 2013
+since: 2019
 
 # footer_custom_text: put custom text directly or put hitokoto to fetch random texts
+# 随机生成谚语
+footer_custom_text: hitokoto
+
 
 ICP:
   enable: false

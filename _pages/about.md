@@ -30,33 +30,21 @@ My research interest includes reinforcement learning and robotics.
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECAI 2023</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[CCPO: Conservatively constrained policy optimization using state augmentation](https://ebooks.iospress.nl/doi/10.3233/FAIA230566)
-
-**Zepeng Wang**, Xiaochuan Shi, Chao Ma, Libing Wu, Jia Wu
-
-- Accepted at ECAI 2023 Main Track (Acceptance Rate: 24%) . 
-</div>
-</div>
+- [CCPO: Conservatively constrained policy optimization using state augmentation](https://ebooks.iospress.nl/doi/10.3233/FAIA230566), 
+  **Zepeng Wang**, Xiaochuan Shi, Chao Ma, Libing Wu, Jia Wu
+  ECAI, 2023 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">计算机研究与发展</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+- [动态决策驱动的工控网络数据要素威胁检测方法](https://crad.ict.ac.cn/article/doi/10.7544/issn1000-1239.202440387)
+  **Zepeng Wang**, Chao Ma, Zhuangzhuang Zhang, Libing Wu, Xiaochuan Shi
+  Journal of Computer Research and Development (计算机研究与发展), 2024
 
-[动态决策驱动的工控网络数据要素威胁检测方法](https://crad.ict.ac.cn/article/doi/10.7544/issn1000-1239.202440387)
-
-**Zepeng Wang**, Chao Ma, Zhuangzhuang Zhang, Libing Wu, Xiaochuan Shi
-
-- Accepted at ECAI 2023 Main Track (Acceptance Rate: 24%) . 
-</div>
-</div>
 
 # 🎖 Honors and Awards
+- *2024.10* Second Prize for Graduate Student Outstanding Academic Scholarship
 - *2023.09* LeiJun Computer Science Scholarship
-- *2022.0?* First-class College Postgraduate Excellence Scholarship
-- *2021.0?* Second-class College Undergraduate Excellence Scholarship
+- *2022.07* First Prize for College Postgraduate Excellence Scholarship
+- *2021.07* Second Prize for College Undergraduate Excellence Scholarship
 - *2017.09* Freshman Scholarship of Wuhan University
 
 # 📖 Educations

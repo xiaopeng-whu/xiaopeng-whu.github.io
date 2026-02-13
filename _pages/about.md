@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a second-year Ph.D. student at the School of Cyber Science and Engineering at Wuhan University, advised by Xiaochuan Shi and Chao Ma. I am also an intern of BeingBeyond founded by Zongqing Lu.
+I am a third-year Ph.D. student at [the School of Cyber Science and Engineering at Wuhan University](https://cse.whu.edu.cn/), advised by [Xiaochuan Shi](https://scholar.google.com/citations?user=o6CFxvoAAAAJ) and [Chao Ma](https://scholar.google.com/citations?user=KxM9fukAAAAJ). I am also an intern of [BeingBeyond](https://github.com/BeingBeyond) founded by [Zongqing Lu](https://z0ngqing.github.io/).
 
 I received my Bachelor's degree in Cyber Science and Engineering at Wuhan University, advised by Xiaochuan Shi. After two years of master's studies, I chose to pursue a doctorate through a Successive Postgraduate and Doctoral Program.
 
@@ -25,26 +25,49 @@ My research interest includes reinforcement learning and robotics.
 
 
 # 🔥 News
-- *2024.09*: &nbsp;🎉 One papers is accepted by Journal of Computer Research and Development (计算机研究与发展)
-- *2023.07*: &nbsp;🎉 One papers is accepted by ECAI 2023 
+- *2025.11*: &nbsp;🎉 One paper is accepted by IEEE Robotics and Automation Letters (RA-L)
+- *2024.09*: &nbsp;🎉 One paper is accepted by Journal of Computer Research and Development (计算机研究与发展)
+- *2023.07*: &nbsp;🎉 One paper is accepted by 26th European Conference on Artificial Intelligence (ECAI 2023) 
 
-# 📝 Publications 
+# 📝 Selected Works
+
+*:equal contribution; †: corresponding author; ‡: project leader
+
+- [General Humanoid Whole-Body Control via Pretraining and Fast Adaptation](https://arxiv.org/abs/2602.11929)  
+
+  **Zepeng Wang**, Jiangxing Wang, Shiqing Yao, Yu Zhang, Ziluo Ding, Ming Yang, Yuxuan Wang, Haobin Jiang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>
+  
+  arXiv preprint, 2026
+
+
+- [CROSSER: Learning Generalizable Humanoid Locomotion Through Inverse Dynamics-Guided Cross-Simulator Adaptation](https://ieeexplore.ieee.org/abstract/document/11231381)  
+
+  **Zepeng Wang<sup>\*</sup>**, Xiaochuan Shi<sup>\*</sup>, Ziluo Ding, Yuxuan Wang, Zhenguo Sun, Chao Ma<sup>†</sup>, Zongqing Lu<sup>†</sup>
+  
+  RA-L, 2025
+
+- [RL from Physical Feedback: Aligning Large Motion Models with Humanoid Control](https://arxiv.org/abs/2506.12769)  
+
+  Junpeng Yue, **Zepeng Wang**, Yuxuan Wang, Weishuai Zeng, Jiangxing Wang, Xinrun Xu, Yu Zhang, Sipeng Zheng, Ziluo Ding, Zongqing Lu<sup>†</sup>
+  
+  arXiv preprint, 2025
 
 - [CCPO: Conservatively constrained policy optimization using state augmentation](https://ebooks.iospress.nl/doi/10.3233/FAIA230566)  
 
-  **Zepeng Wang**, Xiaochuan Shi, Chao Ma, Libing Wu, Jia Wu
+  **Zepeng Wang<sup>\*</sup>**, Xiaochuan Shi<sup>\*</sup>, Chao Ma<sup>†</sup>, Libing Wu, Jia Wu
   
   ECAI, 2023 
 
 
 - [动态决策驱动的工控网络数据要素威胁检测方法](https://crad.ict.ac.cn/article/doi/10.7544/issn1000-1239.202440387)  
 
-  **Zepeng Wang**, Chao Ma, Zhuangzhuang Zhang, Libing Wu, Xiaochuan Shi
+  **Zepeng Wang**, Chao Ma, Zhuangzhuang Zhang, Libing Wu, Xiaochuan Shi<sup>†</sup>
 
   Journal of Computer Research and Development (计算机研究与发展), 2024
 
 
 # 🎖 Honors and Awards
+- *2025.07* College Postgraduate Excellence Scholarship
 - *2024.10* Second Prize for Graduate Student Outstanding Academic Scholarship
 - *2023.09* LeiJun Computer Science Scholarship
 - *2022.07* First Prize for College Postgraduate Excellence Scholarship
@@ -63,3 +86,6 @@ My research interest includes reinforcement learning and robotics.
 # 💻 Internships
 - *2025.05 - present*, [BeingBeyond](https://github.com/BeingBeyond), China.
 - *2024.08 - 2025.04*, [BAAI](https://www.baai.ac.cn/), China.
+
+<!-- # 🧐 Reviewer
+- *2025*, RA-L -->

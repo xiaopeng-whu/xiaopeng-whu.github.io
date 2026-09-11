@@ -1,3 +1,9 @@
 _site/
 push.sh
 .DS_Store
+.bundle/
+vendor/
+.sass-cache/
+.jekyll-cache/
+_preview/*.log
+_preview/*.pid

@@ -52,6 +52,20 @@ AcadHomepage
 1. 将你的主页内容添加到 [_pages/about.md](../_pages/about.md).
 1. 你的主页将会被部署到`https://USERNAME.github.io`.
 
+## Windows 本地预览
+
+安装 Ruby + Devkit 和项目依赖后，双击项目根目录的 `preview.cmd`。
+浏览器会打开 http://127.0.0.1:4000 。保留启动窗口，修改并保存页面或样式后，网页会自动刷新。
+按 `Ctrl+C` 或双击 `stop-preview.cmd` 停止服务；下次预览再次双击 `preview.cmd` 即可。
+
+- 首页内容：`_pages/about.md`
+- 网站和个人信息：`_config.yml`（修改后需重启预览）
+- 样式：`_sass/` 和 `assets/css/`
+
+第一次安装依赖可在项目目录运行 `bundle install`。
+本地生成的 `_site/` 已被 Git 忽略；查看效果不需要提交或推送到 GitHub。
+引用次数等在线数据仍需联网加载。
+
 ## 本地调试
 
 1. 使用`git clone`将本项目克隆到本地。

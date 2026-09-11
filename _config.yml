@@ -22,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Zepeng Wang 王泽鹏"
-  avatar           : "images/android-chrome-512x512.png"
+  avatar           : "images/avatar.jpg"
   bio              : ""
   location         : "China"
   employer         :
@@ -65,6 +65,9 @@ include:
   - _pages
   - files
 exclude:
+  - _preview
+  - preview.cmd
+  - stop-preview.cmd
   - docs
   - google_scholar_crawler
   - "*.sublime-project"

@@ -22,6 +22,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Zepeng Wang 王泽鹏"
+  display_name     : |-
+    Zepeng Wang
+    王泽鹏
   avatar           : "images/avatar.jpg"
   bio              : ""
   location         : "China"

@@ -69,13 +69,6 @@ My research interest includes reinforcement learning and robotics.
   Under review, 2026
 
 
-- [Being-M0.7: A Latent World-Action Model for Humanoid Robots](https://research.beingbeyond.com/being-m07/being-m07.pdf)  
-
-  Junpeng Yue, Boyuan Li, Yuxuan Wang, **Zepeng Wang**, Yuhui Fu, Feiyang Xie, Yu Zhang, Jing Zhang, Jiangxing Wang, Zongqing Lu<sup>‡</sup>
-  
-  arXiv, 2026
-
-
 - [CCPO: Conservatively constrained policy optimization using state augmentation](https://ebooks.iospress.nl/doi/10.3233/FAIA230566)  
 
   **Zepeng Wang<sup>\*</sup>**, Xiaochuan Shi<sup>\*</sup>, Chao Ma<sup>†</sup>, Libing Wu, Jia Wu

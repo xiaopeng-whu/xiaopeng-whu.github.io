@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a fourth-year Ph.D. student at [the School of Cyber Science and Engineering at Wuhan University](https://cse.whu.edu.cn/), advised by [Xiaochuan Shi](https://scholar.google.com/citations?user=o6CFxvoAAAAJ) and [Chao Ma](https://scholar.google.com/citations?user=KxM9fukAAAAJ). Now I am an intern of [X-Humanoid](https://x-humanoid.com). Previously, I am also an intern of [BeingBeyond](https://github.com/BeingBeyond) founded by [Zongqing Lu](https://z0ngqing.github.io/).
+I am a fourth-year Ph.D. student at [the School of Cyber Science and Engineering at Wuhan University](https://cse.whu.edu.cn/), advised by [Xiaochuan Shi](https://scholar.google.com/citations?user=o6CFxvoAAAAJ) and [Chao Ma](https://scholar.google.com/citations?user=KxM9fukAAAAJ). Now I am an intern of [X-Humanoid](https://x-humanoid.com). Previously, I was also an intern of [BeingBeyond](https://github.com/BeingBeyond) founded by [Zongqing Lu](https://z0ngqing.github.io/).
 
 I received my Bachelor's degree in Cyber Science and Engineering at Wuhan University, advised by Xiaochuan Shi. After two years of master's studies, I chose to pursue a doctorate through a Successive Postgraduate and Doctoral Program.
 
@@ -62,7 +62,7 @@ My research interest includes reinforcement learning and robotics.
   arXiv, 2026
 
 
-- [PLAT: Sparse Timed Keyframe Motion Tracking for Humanoid Control via Privileged Latent Transition Learning]()  
+- [PLAT: Sparse Timed Keyframe Motion Tracking for Humanoid Control via Privileged Latent Transition Learning](https://arxiv.org/abs/2609.25754)  
 
   **Zepeng Wang**, Jiangxing Wang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>
   

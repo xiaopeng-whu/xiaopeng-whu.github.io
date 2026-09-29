@@ -1,0 +1,26 @@
+<div class="publications">
+  {% for paper in site.data.publications %}
+  <article class="publication" aria-labelledby="publication-{{ paper.id }}">
+    {% if paper.image %}
+    <a class="publication__visual" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener" aria-label="View figure: {{ paper.title | escape }}">
+      <img src="{{ paper.image | relative_url }}" alt="{{ paper.image_alt | escape }}" loading="lazy" decoding="async"{% if paper.image_width and paper.image_height %} width="{{ paper.image_width }}" height="{{ paper.image_height }}"{% endif %}>
+    </a>
+    {% else %}
+    <a class="publication__visual publication__cover publication__cover--{{ paper.id }}" href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}">
+      <span class="publication__cover-label" aria-hidden="true">{{ paper.label }}</span>
+      <span class="publication__cover-topic" aria-hidden="true">{{ paper.topic }}</span>
+    </a>
+    {% endif %}
+    <div class="publication__details">
+      <h3 id="publication-{{ paper.id }}" class="publication__title"><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+      <div class="publication__authors">{{ paper.authors | markdownify }}</div>
+      <p class="publication__venue">{{ paper.venue }}</p>
+      <div class="publication__links">
+        <a href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
+        {% if paper.webpage %}<a href="{{ paper.webpage }}" aria-label="Project webpage: {{ paper.title | escape }}"><i class="fas fa-globe" aria-hidden="true"></i> Webpage</a>{% endif %}
+        {% if paper.code %}<a href="{{ paper.code }}" aria-label="Source code: {{ paper.title | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>

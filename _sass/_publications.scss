@@ -1,0 +1,116 @@
+/* Compact publication rows with full, uncropped figures. */
+.publications {
+  margin: 0.25em 0 1.5em;
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #e9edf0;
+
+  &:last-child { border-bottom: 0; }
+
+  .publication__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+    }
+
+  }
+
+  .publication__cover {
+    aspect-ratio: 16 / 11;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+    background: #eef3f8;
+    color: #35536e;
+    text-align: center;
+  }
+
+  .publication__cover--ccpo {
+    background: #f0f4ef;
+    color: #486348;
+  }
+
+  .publication__cover-label {
+    font-size: 1.35em;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+    line-height: 1.2;
+  }
+
+  .publication__cover-topic {
+    max-width: 180px;
+    font-size: 0.72em;
+    line-height: 1.5;
+  }
+
+  .publication__title {
+    margin: 0 0 8px;
+    font-size: 1em;
+    line-height: 1.45;
+
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  }
+
+  .publication__authors {
+    font-size: 0.85em;
+    line-height: 1.65;
+    p { margin: 0 0 8px; }
+  }
+
+  .publication__venue {
+    margin: 0 0 8px;
+    font-size: 0.85em;
+    font-style: italic;
+    color: #586675;
+  }
+
+  .publication__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.75em;
+    font-weight: 600;
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    i { font-size: 1em; }
+  }
+
+  a:focus-visible {
+    outline: 2px solid #456d92;
+    outline-offset: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .publication {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 24px 0;
+
+    .publication__visual {
+      max-width: 320px;
+      justify-self: center;
+    }
+  }
+}

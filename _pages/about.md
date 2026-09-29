@@ -34,47 +34,7 @@ My research interest includes reinforcement learning and robotics.
 
 *:equal contribution; †: corresponding author; ‡: project leader
 
-- [General Humanoid Whole-Body Control via Pretraining and Fast Adaptation](https://arxiv.org/abs/2602.11929)  
-
-  **Zepeng Wang**, Jiangxing Wang, Shiqing Yao, Yu Zhang, Ziluo Ding, Ming Yang, Yuxuan Wang, Haobin Jiang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>
-  
-  CoRL, 2026
-
-
-- [CROSSER: Learning Generalizable Humanoid Locomotion Through Inverse Dynamics-Guided Cross-Simulator Adaptation](https://ieeexplore.ieee.org/abstract/document/11231381)  
-
-  **Zepeng Wang<sup>\*</sup>**, Xiaochuan Shi<sup>\*</sup>, Ziluo Ding, Yuxuan Wang, Zhenguo Sun, Chao Ma<sup>†</sup>, Zongqing Lu<sup>†</sup>
-  
-  RA-L, 2025
-
-
-- [RL from Physical Feedback: Aligning Large Motion Models with Humanoid Control](https://arxiv.org/abs/2506.12769)  
-
-  Junpeng Yue, **Zepeng Wang**, Yuxuan Wang, Weishuai Zeng, Jiangxing Wang, Xinrun Xu, Yu Zhang, Sipeng Zheng, Ziluo Ding, Zongqing Lu<sup>†</sup>
-  
-  ECCV, 2026
-
-
-- [Being-M0.7: A Latent World-Action Model for Humanoid Robots](https://research.beingbeyond.com/being-m07/being-m07.pdf)  
-
-  Junpeng Yue<sup>\*</sup>, Boyuan Li<sup>\*</sup>, Yuxuan Wang<sup>\*</sup>, **Zepeng Wang**, Yuhui Fu, Feiyang Xie, Yu Zhang, Jing Zhang, Jiangxing Wang, Zongqing Lu<sup>‡</sup>
-  
-  arXiv, 2026
-
-
-- [PLAT: Sparse Timed Keyframe Motion Tracking for Humanoid Control via Privileged Latent Transition Learning](https://arxiv.org/abs/2609.25754)  
-
-  **Zepeng Wang**, Jiangxing Wang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>
-  
-  Under review, 2026
-
-
-- [CCPO: Conservatively constrained policy optimization using state augmentation](https://ebooks.iospress.nl/doi/10.3233/FAIA230566)  
-
-  **Zepeng Wang<sup>\*</sup>**, Xiaochuan Shi<sup>\*</sup>, Chao Ma<sup>†</sup>, Libing Wu, Jia Wu
-  
-  ECAI, 2023 
-
+{% include publications.html %}
 
 <!-- - [动态决策驱动的工控网络数据要素威胁检测方法](https://crad.ict.ac.cn/article/doi/10.7544/issn1000-1239.202440387)  
 
@@ -101,9 +61,8 @@ My research interest includes reinforcement learning and robotics.
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
 # 💻 Internships
-- *2026.08 - present*, [X-Humanoid](https://x-humanoid.com), China.
-- *2025.05 - 2026.07*, [BeingBeyond](https://github.com/BeingBeyond), China.
-- *2024.08 - 2025.04*, [BAAI](https://www.baai.ac.cn/), China.
+
+{% include internships.html %}
 
 # 🧐 Reviewer Service
 - *2026*, NIPS, ECCV, CoRL

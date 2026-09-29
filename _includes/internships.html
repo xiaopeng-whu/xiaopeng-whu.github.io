@@ -1,0 +1,13 @@
+<ul class="internships">
+  {% for internship in site.data.internships %}
+  <li class="internship">
+    <a class="internship__logo" href="{{ internship.url }}" aria-label="{{ internship.name | escape }}">
+      <img src="{{ internship.logo | relative_url }}" alt="{{ internship.name | escape }} logo" loading="lazy" decoding="async">
+    </a>
+    <div class="internship__details">
+      <a class="internship__name" href="{{ internship.url }}">{{ internship.name }}</a>
+      <p class="internship__meta"><span>{{ internship.period }}</span><span>{{ internship.location }}</span></p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

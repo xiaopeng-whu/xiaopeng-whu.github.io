@@ -1,0 +1,18 @@
+- name: X-Humanoid
+  period: "2026.08 - present"
+  location: China
+  url: https://x-humanoid.com
+  logo: /images/organizations/x-humanoid.png
+  logo_source: https://www.x-humanoid.com/oss/static/img/logo2.png
+- name: BeingBeyond
+  period: "2025.05 - 2026.07"
+  location: China
+  url: https://github.com/BeingBeyond
+  logo: /images/organizations/beingbeyond.png
+  logo_source: https://research.beingbeyond.com/static/bb-logo.png
+- name: BAAI
+  period: "2024.08 - 2025.04"
+  location: China
+  url: https://www.baai.ac.cn/
+  logo: /images/organizations/baai.png
+  logo_source: https://www.baai.ac.cn/Upfile/File/2025-02-26/c843bcbb-5278-418d-bda6-f199bd9797f9..png

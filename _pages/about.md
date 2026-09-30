@@ -19,7 +19,7 @@ redirect_from:
 
 I am a fourth-year Ph.D. student at [the School of Cyber Science and Engineering at Wuhan University](https://cse.whu.edu.cn/), advised by [Xiaochuan Shi](https://scholar.google.com/citations?user=o6CFxvoAAAAJ) and [Chao Ma](https://scholar.google.com/citations?user=KxM9fukAAAAJ). Now I am an intern of [X-Humanoid](https://x-humanoid.com). Previously, I was also an intern of [BeingBeyond](https://github.com/BeingBeyond) founded by [Zongqing Lu](https://z0ngqing.github.io/).
 
-I received my Bachelor's degree in Cyber Science and Engineering at Wuhan University, advised by Xiaochuan Shi. After two years of master's studies, I chose to pursue a doctorate through a Successive Postgraduate and Doctoral Program.
+I received my Bachelor's degree in Computer Science and Technology with the School of Cyber Science and Engineering at Wuhan University, advised by Xiaochuan Shi. After two years of master's studies, I chose to pursue a doctorate through a Successive Postgraduate and Doctoral Program.
 
 My research interest includes reinforcement learning and robotics. 
 

@@ -65,5 +65,7 @@ My research interest includes reinforcement learning and robotics.
 {% include internships.html %}
 
 # 🧐 Reviewer Service
-- *2026*, NIPS, ECCV, CoRL
-- *2025*, RA-L
+- **Conference Reviewer**
+  - NeurIPS / ECCV / CoRL / ICRA
+- **Journal Reviewer**
+  - RA-L

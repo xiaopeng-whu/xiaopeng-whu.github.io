@@ -6,6 +6,8 @@
     </a>
     <div class="internship__details">
       <a class="internship__name" href="{{ internship.url }}">{{ internship.name }}</a>
+      {% if internship.role %}<p class="internship__role">{{ internship.role }}</p>{% endif %}
+      {% if internship.department %}<p class="internship__department">{{ internship.department }}</p>{% endif %}
       <p class="internship__meta"><span>{{ internship.period }}</span><span>{{ internship.location }}</span></p>
     </div>
   </li>

@@ -40,6 +40,17 @@
     &:hover { text-decoration: underline; }
   }
 
+  .internship__role,
+  .internship__department {
+    margin: 4px 0 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .internship__department {
+    color: #586675;
+  }
+
   .internship__meta {
     display: flex;
     flex-wrap: wrap;

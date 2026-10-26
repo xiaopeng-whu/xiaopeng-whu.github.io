@@ -19,6 +19,9 @@
 | rlpf.png | RLPF Figure 1，仿真与真机效果对比 | https://arxiv.org/html/2506.12769v1/first_fig_right_crop.png |
 | being-m07-figure1.png | Being-M0.7 首页 Figure 1，总览图 | https://research.beingbeyond.com/being-m07/being-m07.pdf ，第 1 页 |
 | plat.png | PLAT Figure 1，方法框架图 | https://arxiv.org/html/2609.25754v1/framework.png |
+| cora.png | CoRA Figure 1，完整训练方法框架 | 作者提供的 CoRA-MIR-2026 稿件，第 5 页 |
 | ccpo.png | CCPO Figure 2，Pendulum 与 Reacher 的奖励和成本曲线 | https://research-management.mq.edu.au/ws/portalfiles/portal/347956034/342699606.pdf ，第 6 页 |
 
-当前 6 篇论文均使用真实配图。CCPO 暂用 Figure 2：同时呈现任务回报和约束成本，后续可替换。FAST 的 CoRL 版本首图与之前 arXiv HTML v1 的 Figure 1 不同，此处按作者要求使用 CoRL 版本首图。
+当前 7 篇论文均使用真实配图。CCPO 暂用 Figure 2：同时呈现任务回报和约束成本，后续可替换。FAST 的 CoRL 版本首图与之前 arXiv HTML v1 的 Figure 1 不同，此处按作者要求使用 CoRL 版本首图。
+
+尚无论文链接时省略 `url`，标题显示为普通文字，不显示 Paper 入口。CoRA 的共同一作与通讯作者标记按首页图例统一为 * 与 †。

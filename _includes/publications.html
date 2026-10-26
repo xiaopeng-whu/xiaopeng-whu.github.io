@@ -12,14 +12,16 @@
     </a>
     {% endif %}
     <div class="publication__details">
-      <h3 id="publication-{{ paper.id }}" class="publication__title"><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+      <h3 id="publication-{{ paper.id }}" class="publication__title">{% if paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
       <div class="publication__authors">{{ paper.authors | markdownify }}</div>
       <p class="publication__venue">{{ paper.venue }}</p>
+      {% if paper.url or paper.webpage or paper.code %}
       <div class="publication__links">
-        <a href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
+        {% if paper.url %}<a href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
         {% if paper.webpage %}<a href="{{ paper.webpage }}" aria-label="Project webpage: {{ paper.title | escape }}"><i class="fas fa-globe" aria-hidden="true"></i> Webpage</a>{% endif %}
         {% if paper.code %}<a href="{{ paper.code }}" aria-label="Source code: {{ paper.title | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
       </div>
+      {% endif %}
     </div>
   </article>
   {% endfor %}

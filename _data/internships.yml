@@ -1,16 +1,22 @@
 - name: X-Humanoid
+  role: Motion Control Algorithm Intern
+  department: Motion Control Department
   period: "2026.08 - present"
   location: China
   url: https://x-humanoid.com
   logo: /images/organizations/x-humanoid.png
   logo_source: https://www.x-humanoid.com/oss/static/img/logo2.png
 - name: BeingBeyond
+  role: Motion Control Algorithm Intern
+  department: Frontier Exploration Department
   period: "2025.05 - 2026.07"
   location: China
   url: https://github.com/BeingBeyond
   logo: /images/organizations/beingbeyond.png
   logo_source: https://research.beingbeyond.com/static/bb-logo.png
 - name: BAAI
+  role: Motion Control Algorithm Intern
+  department: Multimodal Interaction Research Center
   period: "2024.08 - 2025.04"
   location: China
   url: https://www.baai.ac.cn/

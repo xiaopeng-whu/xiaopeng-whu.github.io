@@ -54,7 +54,7 @@
   title: "PLAT: Sparse Timed Keyframe Motion Tracking for Humanoid Control via Privileged Latent Transition Learning"
   url: "https://arxiv.org/abs/2609.25754"
   authors: "**Zepeng Wang**, Jiangxing Wang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>"
-  venue: "Under review, 2026"
+  venue: "arXiv, 2026"
   label: "PLAT"
   topic: "Sparse keyframe tracking"
   image: "/images/publications/plat.png"
@@ -62,6 +62,17 @@
   image_height: 1269
   image_alt: "PLAT framework: dense expert supervision, privileged latent learning, and latent residual refinement, from Figure 1."
   image_source: "https://arxiv.org/html/2609.25754v1"
+- id: cora
+  title: "Command-Referenced Observation Attacks for Behavior Hijacking in Humanoid Locomotion"
+  authors: "**Zepeng Wang<sup>\\*</sup>**, Ziluo Ding<sup>\\*</sup>, Fengyi Zhang, Kan Yuan, Xiaochuan Shi<sup>†</sup>"
+  venue: "Under review, 2026"
+  label: "CoRA"
+  topic: "Observation attacks for humanoid locomotion"
+  image: "/images/publications/cora.png"
+  image_width: 1365
+  image_height: 720
+  image_alt: "CoRA Figure 1: training framework with attack policy, perturbation budget, command reference, behavior feedback, and reference annealing."
+  image_source: "Author-provided CoRA manuscript, page 5, Figure 1"
 - id: ccpo
   title: "CCPO: Conservatively constrained policy optimization using state augmentation"
   url: "https://ebooks.iospress.nl/doi/10.3233/FAIA230566"

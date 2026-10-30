@@ -64,6 +64,7 @@
   image_source: "https://arxiv.org/html/2609.25754v1"
 - id: cora
   title: "Command-Referenced Observation Attacks for Behavior Hijacking in Humanoid Locomotion"
+  webpage: "https://xiaopeng-whu.github.io/CoRA/"
   authors: "**Zepeng Wang<sup>\\*</sup>**, Ziluo Ding<sup>\\*</sup>, Fengyi Zhang, Kan Yuan, Xiaochuan Shi<sup>†</sup>"
   venue: "Under review, 2026"
   label: "CoRA"

@@ -69,11 +69,11 @@
   venue: "Under review, 2026"
   label: "CoRA"
   topic: "Observation attacks for humanoid locomotion"
-  image: "/images/publications/cora.png"
-  image_width: 1365
-  image_height: 720
-  image_alt: "CoRA Figure 1: training framework with attack policy, perturbation budget, command reference, behavior feedback, and reference annealing."
-  image_source: "Author-provided CoRA manuscript, page 5, Figure 1"
+  image: "/images/publications/cora-teaser.png"
+  image_width: 919
+  image_height: 307
+  image_alt: "CoRA teaser: command-following locomotion, bounded observation attacks, and targeted behavior hijacking."
+  image_source: "CoRA-IoTJ-2026/figures/teaser/CoRA_teaser_figure.pdf"
 - id: ccpo
   title: "CCPO: Conservatively constrained policy optimization using state augmentation"
   url: "https://ebooks.iospress.nl/doi/10.3233/FAIA230566"
@@ -82,8 +82,8 @@
   venue: "ECAI, 2023"
   label: "CCPO"
   topic: "Constrained policy optimization"
-  image: "/images/publications/ccpo.png"
-  image_width: 720
-  image_height: 588
-  image_alt: "CCPO Figure 2: episode return and cost of TRPO-type algorithms on Pendulum and Reacher."
-  image_source: "https://research-management.mq.edu.au/ws/portalfiles/portal/347956034/342699606.pdf"
+  image: "/images/publications/ccpo-framework.png"
+  image_width: 1774
+  image_height: 887
+  image_alt: "CCPO framework: state augmentation, conservative reward shaping, and three-timescale learning."
+  image_source: "CCPO-ECAI2023/framework-20261102.png; editable PowerPoint reconstruction exported to framework-20261102-editable.pdf"

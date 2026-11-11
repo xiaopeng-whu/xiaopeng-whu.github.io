@@ -62,6 +62,19 @@
   image_height: 1269
   image_alt: "PLAT framework: dense expert supervision, privileged latent learning, and latent residual refinement, from Figure 1."
   image_source: "https://arxiv.org/html/2609.25754v1"
+- id: redirectmimic
+  title: "RedirectMimic: Local Motion Content Redaction for Humanoid Whole-Body Control"
+  url: "https://arxiv.org/pdf/2611.14049"
+  webpage: "https://xiaopeng-whu.github.io/RedirectMimic/"
+  authors: "**Zepeng Wang**, Xiaochuan Shi<sup>†</sup>"
+  venue: "arXiv, 2026"
+  label: "RedirectMimic"
+  topic: "Local motion content redaction"
+  image: "/images/publications/redirectmimic-teaser.png"
+  image_width: 4200
+  image_height: 1620
+  image_alt: "Matched frames from a Unitree G1 simulation showing the original reference motion above and the RedirectMimic execution below."
+  image_source: "RedirectMimic-2026/manuscript/figures/teaser.png (Figure 1)"
 - id: cora
   title: "Command-Referenced Observation Attacks for Behavior Hijacking in Humanoid Locomotion"
   webpage: "https://xiaopeng-whu.github.io/CoRA/"

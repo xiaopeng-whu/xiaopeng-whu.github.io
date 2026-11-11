@@ -17,11 +17,12 @@
 | fast-figure1.png | FAST CoRL 版本首页 Figure 1，遥操作与快速适应技能展示 | 作者本地 `FAST-CORL2026/FAST_CoRL_2026.pdf`，第 1 页 |
 | crosser.png | CROSSER Figure 2，完整方法框架 | 作者本地 RA-L 终版 PDF，第 4 页；https://doi.org/10.1109/LRA.2025.3630544 |
 | rlpf.png | RLPF Figure 1，仿真与真机效果对比 | https://arxiv.org/html/2506.12769v1/first_fig_right_crop.png |
+| redirectmimic-teaser.png | RedirectMimic 首页 Figure 1，参考动作与模拟执行的逐帧对比 | 作者原图 `RedirectMimic-2026/manuscript/figures/teaser.png`；https://arxiv.org/pdf/2611.14049 |
 | being-m07-figure1.png | Being-M0.7 首页 Figure 1，总览图 | https://research.beingbeyond.com/being-m07/being-m07.pdf ，第 1 页 |
 | plat.png | PLAT Figure 1，方法框架图 | https://arxiv.org/html/2609.25754v1/framework.png |
 | cora-teaser.png | CoRA 新 teaser | `CoRA-IoTJ-2026/figures/teaser/CoRA_teaser_figure.pdf` |
 | ccpo-framework.png | CCPO 方法框架，可编辑 PPT 导出的 PDF 渲染图 | `CCPO-ECAI2023/framework-20261102.png` → `framework-20261102-editable.pptx` → `framework-20261102-editable.pdf` |
 
-当前 7 篇论文均使用真实配图。CCPO 已于 2026-11-02 换成方法框架，原目录保存可编辑 PPTX 和对应 PDF；公式按用户确认采用原生文字与上下标。FAST 的 CoRL 版本首图与之前 arXiv HTML v1 的 Figure 1 不同，此处按作者要求使用 CoRL 版本首图。
+当前 8 篇论文均使用真实配图。CCPO 已于 2026-11-02 换成方法框架，原目录保存可编辑 PPTX 和对应 PDF；公式按用户确认采用原生文字与上下标。FAST 的 CoRL 版本首图与之前 arXiv HTML v1 的 Figure 1 不同，此处按作者要求使用 CoRL 版本首图。
 
 尚无论文链接时省略 `url`，标题显示为普通文字，不显示 Paper 入口。CoRA 的共同一作与通讯作者标记按首页图例统一为 * 与 †。

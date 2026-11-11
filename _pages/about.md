@@ -25,10 +25,11 @@ My research interest includes reinforcement learning and robotics.
 
 
 # 🔥 News
-- *2026.09*: &nbsp;🎉 One paper is accepted by the Conference on Robot Learning (CoRL)
-- *2025.11*: &nbsp;🎉 One paper is accepted by IEEE Robotics and Automation Letters (RA-L)
-- *2024.09*: &nbsp;🎉 One paper is accepted by Journal of Computer Research and Development (计算机研究与发展)
-- *2023.07*: &nbsp;🎉 One paper is accepted by 26th European Conference on Artificial Intelligence (ECAI 2023) 
+- *2026.09*: &nbsp;🎉 [FAST](https://beingbeyond.github.io/FAST/) was accepted at the Conference on Robot Learning (CoRL).
+- *2026.07*: &nbsp;🎉 [RLPF](https://beingbeyond.github.io/RLPF/) was accepted at the European Conference on Computer Vision (ECCV).
+- *2025.11*: &nbsp;🎉 [CROSSER](https://ieeexplore.ieee.org/abstract/document/11231381) was accepted for publication in IEEE Robotics and Automation Letters (RA-L).
+- *2024.09*: &nbsp;🎉 [DELTA](https://doi.org/10.7544/issn1000-1239.202440387) was accepted for publication in the Journal of Computer Research and Development (计算机研究与发展).
+- *2023.07*: &nbsp;🎉 [CCPO](https://doi.org/10.3233/FAIA230566) was accepted at the 26th European Conference on Artificial Intelligence (ECAI 2023).
 
 # 📝 Selected Works
 

@@ -22,6 +22,9 @@
         {% if paper.code %}<a href="{{ paper.code }}" aria-label="Source code: {{ paper.title | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
       </div>
       {% endif %}
+      {% if paper.tldr %}
+      <p class="publication__tldr"><strong><i class="fas fa-comment-dots" aria-hidden="true"></i> TL;DR:</strong> {{ paper.tldr | escape }}</p>
+      {% endif %}
     </div>
   </article>
   {% endfor %}

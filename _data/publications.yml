@@ -6,6 +6,7 @@
   authors: "**Zepeng Wang**, Jiangxing Wang, Shiqing Yao, Yu Zhang, Ziluo Ding, Ming Yang, Yuxuan Wang, Haobin Jiang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>"
   venue: "CoRL, 2026"
   label: "FAST"
+  tldr: "A humanoid controller pretrained on diverse motions can balance through side kicks and single-leg squats. A small residual policy helps it learn unfamiliar movements while retaining skills it already tracks well."
   topic: "Whole-body control"
   image: "/images/publications/fast-figure1.png"
   image_width: 957
@@ -18,6 +19,7 @@
   authors: "**Zepeng Wang<sup>\\*</sup>**, Xiaochuan Shi<sup>\\*</sup>, Ziluo Ding, Yuxuan Wang, Zhenguo Sun, Chao Ma<sup>†</sup>, Zongqing Lu<sup>†</sup>"
   venue: "RA-L, 2025"
   label: "CROSSER"
+  tldr: "Different simulators can disagree on which action produces the same step. CROSSER uses inverse dynamics to identify those disagreements and train walking policies that transfer more reliably between simulators."
   topic: "Cross-simulator adaptation"
   image: "/images/publications/crosser.png"
   image_width: 1443
@@ -31,6 +33,7 @@
   authors: "Junpeng Yue, **Zepeng Wang**, Yuxuan Wang, Weishuai Zeng, Jiangxing Wang, Xinrun Xu, Yu Zhang, Sipeng Zheng, Ziluo Ding, Zongqing Lu<sup>†</sup>"
   venue: "ECCV, 2026"
   label: "RLPF"
+  tldr: "A motion can match a text prompt yet be impossible for a robot to perform. RLPF rewards motions a simulated humanoid can track while checking that they still match the prompt, improving execution on a real robot."
   topic: "Learning from physical feedback"
   image: "/images/publications/rlpf.png"
   image_width: 2021
@@ -44,6 +47,7 @@
   authors: "Junpeng Yue<sup>\\*</sup>, Boyuan Li<sup>\\*</sup>, Yuxuan Wang<sup>\\*</sup>, **Zepeng Wang**, Yuhui Fu, Feiyang Xie, Yu Zhang, Jing Zhang, Jiangxing Wang, Zongqing Lu<sup>‡</sup>"
   venue: "arXiv, 2026"
   label: "Being-M0.7"
+  tldr: "Being-M0.7 learns from human videos and motion sequences to predict both what comes into view and how the body moves. An action expert uses those predictions to guide a humanoid as it moves and manipulates objects."
   topic: "Latent world-action model"
   image: "/images/publications/being-m07-figure1.png"
   image_width: 1410
@@ -56,6 +60,7 @@
   authors: "**Zepeng Wang**, Jiangxing Wang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>"
   venue: "arXiv, 2026"
   label: "PLAT"
+  tldr: "Give a humanoid a few target poses and the times it should reach them. PLAT learns the transitions from dense motion examples during training, then follows sparse keyframes on a real robot."
   topic: "Sparse keyframe tracking"
   image: "/images/publications/plat.png"
   image_width: 1729
@@ -69,6 +74,7 @@
   authors: "**Zepeng Wang**, Xiaochuan Shi<sup>†</sup>"
   venue: "arXiv, 2026"
   label: "RedirectMimic"
+  tldr: "A humanoid can keep following a reference motion while replacing just one gesture. In simulation, training on an edited target let it lower an overhead arm while retaining the rest of the movement, even when it still saw the original reference."
   topic: "Local motion content redaction"
   image: "/images/publications/redirectmimic-teaser.png"
   image_width: 4200
@@ -81,6 +87,7 @@
   authors: "**Zepeng Wang<sup>\\*</sup>**, Ziluo Ding<sup>\\*</sup>, Fengyi Zhang, Kan Yuan, Xiaochuan Shi<sup>†</sup>"
   venue: "Under review, 2026"
   label: "CoRA"
+  tldr: "Staying upright does not mean a robot is following its command. In simulation, small changes to sensor observations made a humanoid turn or drift sideways while it continued to receive the same forward command."
   topic: "Observation attacks for humanoid locomotion"
   image: "/images/publications/cora-teaser.png"
   image_width: 919
@@ -94,6 +101,7 @@
   authors: "**Zepeng Wang<sup>\\*</sup>**, Xiaochuan Shi<sup>\\*</sup>, Chao Ma<sup>†</sup>, Libing Wu, Jia Wu"
   venue: "ECAI, 2023"
   label: "CCPO"
+  tldr: "CCPO gives a reinforcement learning policy its remaining safety budget and makes violations more costly as that budget shrinks. On control benchmarks, it reduced constraint costs while earning rewards comparable to competing methods."
   topic: "Constrained policy optimization"
   image: "/images/publications/ccpo-framework.png"
   image_width: 1774

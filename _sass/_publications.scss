@@ -96,6 +96,20 @@
     i { font-size: 1em; }
   }
 
+  .publication__tldr {
+    margin: 0.8em 0 0;
+    padding: 0.6em 0.9em;
+    border-left: 3px solid mix($link-color, #fff, 35%);
+    border-radius: 0 5px 5px 0;
+    background: mix($link-color, #fff, 7%);
+    color: #35465a;
+    font-size: 0.85em;
+    line-height: 1.6;
+
+    strong { white-space: nowrap; }
+    i { margin-right: 0.2em; color: $link-color; }
+  }
+
   a:focus-visible {
     outline: 2px solid #456d92;
     outline-offset: 4px;

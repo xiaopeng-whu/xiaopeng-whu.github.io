@@ -21,7 +21,7 @@ I am a fourth-year Ph.D. student at [the School of Cyber Science and Engineering
 
 I received my Bachelor's degree in Computer Science and Technology with the School of Cyber Science and Engineering at Wuhan University, advised by Xiaochuan Shi. After two years of master's studies, I chose to pursue a doctorate through a Successive Postgraduate and Doctoral Program.
 
-My research interest includes reinforcement learning and robotics. 
+My research interest includes ***reinforcement learning***, ***robotics***, and ***safety***.
 
 
 # 🔥 News
@@ -32,6 +32,8 @@ My research interest includes reinforcement learning and robotics.
 - *2023.07*: &nbsp;🎉 [CCPO](https://doi.org/10.3233/FAIA230566) was accepted at the 26th European Conference on Artificial Intelligence (ECAI 2023).
 
 # 📝 Selected Works
+
+*(For the full publications, please see my **[Google Scholar](https://scholar.google.com/citations?user=yZTtQIgAAAAJ)**.)*
 
 *:equal contribution; †: corresponding author; ‡: project leader
 

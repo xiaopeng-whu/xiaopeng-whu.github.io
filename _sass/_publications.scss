@@ -3,6 +3,21 @@
   margin: 0.25em 0 1.5em;
 }
 
+.publication-group {
+  display: grid;
+  grid-template-columns: 4ch minmax(0, 1fr);
+  column-gap: 20px;
+  border-top: 1px solid #ccd6e2;
+
+  h2.publication-group__year {
+    margin: 24px 0 0;
+    align-self: start;
+    font-size: 0.85em;
+    color: #586675;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
 .publication {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -74,15 +89,17 @@
   }
 
   .publication__venue {
-    margin: 0 0 8px;
-    font-size: 0.85em;
-    font-style: italic;
-    color: #586675;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    background: mix($link-color, #fff, 10%);
+    color: $link-color;
+    white-space: nowrap;
   }
 
   .publication__links {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 14px;
     font-size: 0.75em;
     font-weight: 600;
@@ -117,6 +134,8 @@
 }
 
 @media (max-width: 640px) {
+  .publication-group { grid-template-columns: minmax(0, 1fr); }
+
   .publication {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;

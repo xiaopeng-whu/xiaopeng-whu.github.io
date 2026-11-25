@@ -1,10 +1,11 @@
-# Publication order follows the homepage. Omit image to use a text cover.
+# Order within each year follows this file. Omit image to use a text cover.
 - id: fast
   title: "General Humanoid Whole-Body Control via Pretraining and Fast Adaptation"
   url: "https://arxiv.org/abs/2602.11929"
   webpage: "https://beingbeyond.github.io/FAST/"
   authors: "**Zepeng Wang**, Jiangxing Wang, Shiqing Yao, Yu Zhang, Ziluo Ding, Ming Yang, Yuxuan Wang, Haobin Jiang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>"
-  venue: "CoRL, 2026"
+  year: 2026
+  venue: "CoRL"
   label: "FAST"
   tldr: "A humanoid controller pretrained on diverse motions can balance through side kicks and single-leg squats. A small residual policy helps it learn unfamiliar movements while retaining skills it already tracks well."
   topic: "Whole-body control"
@@ -17,7 +18,8 @@
   title: "CROSSER: Learning Generalizable Humanoid Locomotion Through Inverse Dynamics-Guided Cross-Simulator Adaptation"
   url: "https://ieeexplore.ieee.org/abstract/document/11231381"
   authors: "**Zepeng Wang<sup>\\*</sup>**, Xiaochuan Shi<sup>\\*</sup>, Ziluo Ding, Yuxuan Wang, Zhenguo Sun, Chao Ma<sup>†</sup>, Zongqing Lu<sup>†</sup>"
-  venue: "RA-L, 2025"
+  year: 2025
+  venue: "RA-L"
   label: "CROSSER"
   tldr: "Different simulators can disagree on which action produces the same step. CROSSER uses inverse dynamics to identify those disagreements and train walking policies that transfer more reliably between simulators."
   topic: "Cross-simulator adaptation"
@@ -31,7 +33,8 @@
   url: "https://arxiv.org/abs/2506.12769"
   webpage: "https://beingbeyond.github.io/RLPF/"
   authors: "Junpeng Yue, **Zepeng Wang**, Yuxuan Wang, Weishuai Zeng, Jiangxing Wang, Xinrun Xu, Yu Zhang, Sipeng Zheng, Ziluo Ding, Zongqing Lu<sup>†</sup>"
-  venue: "ECCV, 2026"
+  year: 2026
+  venue: "ECCV"
   label: "RLPF"
   tldr: "A motion can match a text prompt yet be impossible for a robot to perform. RLPF rewards motions a simulated humanoid can track while checking that they still match the prompt, improving execution on a real robot."
   topic: "Learning from physical feedback"
@@ -45,7 +48,8 @@
   url: "https://research.beingbeyond.com/being-m07/being-m07.pdf"
   webpage: "https://research.beingbeyond.com/being-m07/"
   authors: "Junpeng Yue<sup>\\*</sup>, Boyuan Li<sup>\\*</sup>, Yuxuan Wang<sup>\\*</sup>, **Zepeng Wang**, Yuhui Fu, Feiyang Xie, Yu Zhang, Jing Zhang, Jiangxing Wang, Zongqing Lu<sup>‡</sup>"
-  venue: "arXiv, 2026"
+  year: 2026
+  venue: "arXiv"
   label: "Being-M0.7"
   tldr: "Being-M0.7 learns from human videos and motion sequences to predict both what comes into view and how the body moves. An action expert uses those predictions to guide a humanoid as it moves and manipulates objects."
   topic: "Latent world-action model"
@@ -58,7 +62,8 @@
   title: "PLAT: Sparse Timed Keyframe Motion Tracking for Humanoid Control via Privileged Latent Transition Learning"
   url: "https://arxiv.org/abs/2609.25754"
   authors: "**Zepeng Wang**, Jiangxing Wang, Chao Ma, Xiaochuan Shi<sup>†</sup>, Zongqing Lu<sup>‡</sup>"
-  venue: "arXiv, 2026"
+  year: 2026
+  venue: "arXiv"
   label: "PLAT"
   tldr: "Give a humanoid a few target poses and the times it should reach them. PLAT learns the transitions from dense motion examples during training, then follows sparse keyframes on a real robot."
   topic: "Sparse keyframe tracking"
@@ -72,7 +77,8 @@
   url: "https://arxiv.org/pdf/2611.14049"
   webpage: "https://xiaopeng-whu.github.io/RedirectMimic/"
   authors: "**Zepeng Wang**, Xiaochuan Shi<sup>†</sup>"
-  venue: "arXiv, 2026"
+  year: 2026
+  venue: "arXiv"
   label: "RedirectMimic"
   tldr: "A humanoid can keep following a reference motion while replacing just one gesture. In simulation, training on an edited target let it lower an overhead arm while retaining the rest of the movement, even when it still saw the original reference."
   topic: "Local motion content redaction"
@@ -85,7 +91,8 @@
   title: "Command-Referenced Observation Attacks for Behavior Hijacking in Humanoid Locomotion"
   webpage: "https://xiaopeng-whu.github.io/CoRA/"
   authors: "**Zepeng Wang<sup>\\*</sup>**, Ziluo Ding<sup>\\*</sup>, Fengyi Zhang, Kan Yuan, Xiaochuan Shi<sup>†</sup>"
-  venue: "Under review, 2026"
+  year: 2026
+  venue: "Under review"
   label: "CoRA"
   tldr: "Staying upright does not mean a robot is following its command. In simulation, small changes to sensor observations made a humanoid turn or drift sideways while it continued to receive the same forward command."
   topic: "Observation attacks for humanoid locomotion"
@@ -99,7 +106,8 @@
   url: "https://ebooks.iospress.nl/doi/10.3233/FAIA230566"
   code: "https://github.com/xiaopeng-whu/CCPO"
   authors: "**Zepeng Wang<sup>\\*</sup>**, Xiaochuan Shi<sup>\\*</sup>, Chao Ma<sup>†</sup>, Libing Wu, Jia Wu"
-  venue: "ECAI, 2023"
+  year: 2023
+  venue: "ECAI"
   label: "CCPO"
   tldr: "CCPO gives a reinforcement learning policy its remaining safety budget and makes violations more costly as that budget shrinks. On control benchmarks, it reduced constraint costs while earning rewards comparable to competing methods."
   topic: "Constrained policy optimization"

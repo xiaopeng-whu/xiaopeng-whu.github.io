@@ -1,6 +1,6 @@
 # 论文列表与配图
 
-论文信息在 `_data/publications.yml` 中维护，顺序即首页顺序。作者字段支持 Markdown 加粗和 HTML 上标。
+论文信息在 `_data/publications.yml` 中维护。首页按 `year` 倒序分组，同年论文按文件中的顺序展示。`venue` 填会议、期刊或状态，模板会在标签中附上年份。作者字段支持 Markdown 加粗和 HTML 上标。
 
 有项目页时填写可选的 `webpage` 字段，开源仓库填写 `code` 字段。链接按 Paper、Webpage、Code 排列，仅显示已填写的入口，分别使用文档、地球和 GitHub 图标。
 

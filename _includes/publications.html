@@ -1,31 +1,38 @@
 <div class="publications">
-  {% for paper in site.data.publications %}
-  <article class="publication" aria-labelledby="publication-{{ paper.id }}">
-    {% if paper.image %}
-    <a class="publication__visual" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener" aria-label="View figure: {{ paper.title | escape }}">
-      <img src="{{ paper.image | relative_url }}" alt="{{ paper.image_alt | escape }}" loading="lazy" decoding="async"{% if paper.image_width and paper.image_height %} width="{{ paper.image_width }}" height="{{ paper.image_height }}"{% endif %}>
-    </a>
-    {% else %}
-    <a class="publication__visual publication__cover publication__cover--{{ paper.id }}" href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}">
-      <span class="publication__cover-label" aria-hidden="true">{{ paper.label }}</span>
-      <span class="publication__cover-topic" aria-hidden="true">{{ paper.topic }}</span>
-    </a>
-    {% endif %}
-    <div class="publication__details">
-      <h3 id="publication-{{ paper.id }}" class="publication__title">{% if paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
-      <div class="publication__authors">{{ paper.authors | markdownify }}</div>
-      <p class="publication__venue">{{ paper.venue }}</p>
-      {% if paper.url or paper.webpage or paper.code %}
-      <div class="publication__links">
-        {% if paper.url %}<a href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
-        {% if paper.webpage %}<a href="{{ paper.webpage }}" aria-label="Project webpage: {{ paper.title | escape }}"><i class="fas fa-globe" aria-hidden="true"></i> Webpage</a>{% endif %}
-        {% if paper.code %}<a href="{{ paper.code }}" aria-label="Source code: {{ paper.title | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
-      </div>
-      {% endif %}
-      {% if paper.tldr %}
-      <p class="publication__tldr"><strong><i class="fas fa-comment-dots" aria-hidden="true"></i> TL;DR:</strong> {{ paper.tldr | escape }}</p>
-      {% endif %}
+  {% assign years = site.data.publications | map: 'year' | uniq | sort | reverse %}
+  {% for year in years %}
+  <section class="publication-group" aria-labelledby="works-{{ year }}">
+    <h2 class="publication-group__year" id="works-{{ year }}">{{ year }}</h2>
+    <div>
+      {% assign papers = site.data.publications | where: 'year', year %}
+      {% for paper in papers %}
+      <article class="publication" aria-labelledby="publication-{{ paper.id }}">
+        {% if paper.image %}
+        <a class="publication__visual" href="{{ paper.image | relative_url }}" target="_blank" rel="noopener" aria-label="View figure: {{ paper.title | escape }}">
+          <img src="{{ paper.image | relative_url }}" alt="{{ paper.image_alt | escape }}" loading="lazy" decoding="async"{% if paper.image_width and paper.image_height %} width="{{ paper.image_width }}" height="{{ paper.image_height }}"{% endif %}>
+        </a>
+        {% else %}
+        <a class="publication__visual publication__cover publication__cover--{{ paper.id }}" href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}">
+          <span class="publication__cover-label" aria-hidden="true">{{ paper.label }}</span>
+          <span class="publication__cover-topic" aria-hidden="true">{{ paper.topic }}</span>
+        </a>
+        {% endif %}
+        <div class="publication__details">
+          <h3 id="publication-{{ paper.id }}" class="publication__title">{% if paper.url %}<a href="{{ paper.url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
+          <div class="publication__authors">{{ paper.authors | markdownify }}</div>
+          <div class="publication__links">
+            <span class="publication__venue">{{ paper.venue | escape }} {{ paper.year }}</span>
+            {% if paper.url %}<a href="{{ paper.url }}" aria-label="Read paper: {{ paper.title | escape }}"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>{% endif %}
+            {% if paper.webpage %}<a href="{{ paper.webpage }}" aria-label="Project webpage: {{ paper.title | escape }}"><i class="fas fa-globe" aria-hidden="true"></i> Webpage</a>{% endif %}
+            {% if paper.code %}<a href="{{ paper.code }}" aria-label="Source code: {{ paper.title | escape }}"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+          </div>
+          {% if paper.tldr %}
+          <p class="publication__tldr"><strong><i class="fas fa-comment-dots" aria-hidden="true"></i> TL;DR:</strong> {{ paper.tldr | escape }}</p>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
     </div>
-  </article>
+  </section>
   {% endfor %}
 </div>
